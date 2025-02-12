@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicitus Archives Dos - Ordem Paranormal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Implicitus Archives Dos</h1>
+        
+        <div class="character-sheet">
+            <div class="main-column">
+                <section class="attributes">
+                    <h2>Atributos</h2>
+                    <div class="attribute-grid">
+                        <div class="attribute">
+                            <label for="agi">Agilidade (AGI)</label>
+                            <input type="number" id="agi" min="0" value="0">
+                        </div>
+                        <div class="attribute">
+                            <label for="for">Força (FOR)</label>
+                            <input type="number" id="for" min="0" value="0">
+                        </div>
+                        <div class="attribute">
+                            <label for="vig">Vigor (VIG)</label>
+                            <input type="number" id="vig" min="0" value="0">
+                        </div>
+                        <div class="attribute">
+                            <label for="pre">Presença (PRE)</label>
+                            <input type="number" id="pre" min="0" value="0">
+                        </div>
+                        <div class="attribute">
+                            <label for="int">Intelecto (INT)</label>
+                            <input type="number" id="int" min="0" value="0">
+                        </div>
+                        <div class="attribute">
+                            <label for="pi">Pontos de Incentivo</label>
+                            <input type="number" id="pi" min="0" value="0">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="statistics">
+                    <h2>Estatísticas</h2>
+                    <div class="stat-bars">
+                        <div class="stat-container">
+                            <label>PV (Pontos de Vida)</label>
+                            <div class="stat-values">
+                                <input type="number" id="pv-current" min="0" value="0" placeholder="Atual">
+                                <span>/</span>
+                                <input type="number" id="pv-max" min="0" value="0" placeholder="Máximo">
+                            </div>
+                            <div class="progress-bar pv-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <label>PE (Pontos de Esforço)</label>
+                            <div class="stat-values">
+                                <input type="number" id="pe-current" min="0" value="0" placeholder="Atual">
+                                <span>/</span>
+                                <input type="number" id="pe-max" min="0" value="0" placeholder="Máximo">
+                            </div>
+                            <div class="progress-bar pe-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <label>SAN (Sanidade)</label>
+                            <div class="stat-values">
+                                <input type="number" id="san-current" min="0" value="0" placeholder="Atual">
+                                <span>/</span>
+                                <input type="number" id="san-max" min="0" value="0" placeholder="Máximo">
+                            </div>
+                            <div class="progress-bar san-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="skills">
+                    <h2>Perícias</h2>
+                    <div id="skills-container">
+                        <!-- Skills will be added by JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+            <div class="side-column">
+                <section class="inventory">
+                    <h2>Inventário</h2>
+                    <div class="inventory-spaces">
+                        <label for="inventory-slots">Espaços de Inventário:</label>
+                        <input type="number" id="inventory-slots" min="0" max="20" value="10">
+                    </div>
+                    <div id="inventory-container">
+                        <!-- Inventory items will be added by JavaScript -->
+                    </div>
+                    <button id="add-item-btn">Adicionar Item</button>
+                </section>
+            </div>
+        </div>
+
+        <div class="save-section">
+            <button id="save-btn">Salvar Ficha</button>
+            <button id="load-btn">Carregar Ficha</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
